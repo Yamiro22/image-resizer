@@ -1,0 +1,33 @@
+To run the C++ code provided for image resizing using OpenCV, follow these steps:
+
+1. **Install OpenCV**:
+    - First, you'll need to have OpenCV installed on your machine. You can download it from the [official website](https://opencv.org/releases/). Alternatively, if you're on Ubuntu, you can install it using the following command:
+        ```bash
+        sudo apt-get install libopencv-dev
+        ```
+
+2. **Create a C++ File**:
+    - Create a new file named `resizer.cpp` and copy the provided code into this file.
+
+3. **Prepare Your Image**:
+    - Have the image you want to resize ready, name it `input.jpg` and place it in the same directory as your `resizer.cpp` file.
+
+4. **Compile Your Code**:
+    - Open a terminal and navigate to the directory containing `resizer.cpp` and `input.jpg`.
+    - Compile your C++ file with the following command:
+        ```bash
+        g++ -o resizer resizer.cpp `pkg-config --cflags --libs opencv4`
+        ```
+    - This command tells the compiler to create an executable named `resizer` from the source file `resizer.cpp`, and links against the OpenCV libraries.
+
+5. **Run Your Program**:
+    - Now, run your program with the following command:
+        ```bash
+        ./resizer
+        ```
+    - This will create a resized version of `input.jpg` named `output.jpg` in the same directory, and optionally display the original and resized images on the screen.
+
+6. **Check the Output**:
+    - You should now have a file named `output.jpg` in the same directory, which is the resized version of your original image.
+
+Remember, the command to compile might be different if you're using a different operating system or a different setup. The provided command assumes you're on a Unix-like system (e.g., Linux or MacOS) and that OpenCV is installed in a standard location.
